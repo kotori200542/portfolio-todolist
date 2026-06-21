@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">   
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="https://kit.fontawesome.com/3acd142e38.js" crossorigin="anonymous"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poiret+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <div class="todoListTitleDiv">To-do List
+    </div>
+
+    <div class="container">
+    <div class="bground">
+
+    <h2 class="optionTitle">Options</h2>
+
+    <div id="TextAreaContainer">
+        <textarea id="myTextArea" rows="4" cols="50" placeholder="Enter something to add on the to-do list!"></textarea>
+    </div>
+
+    <!-- <div id="chooseTime">
+        <label for="appointment">Deadline:</label>
+        <input
+            type="datetime-local"
+            id="Deadline"
+            name="Deadline"
+            required />
+    </div> -->
+
+    <div class="calendar-wrapper">
+        <span id="calendar-text">Select Deadline</span>
+        <i class="fa-solid fa-calendar-days" id="calendarIcon"></i>
+        <input type="datetime-local" id="Deadline">
+    </div>
+
+
+    <!-- <div id="chooseImage">
+        <label for="addImage">Label color:</label>
+        <input
+            type="color"
+            id="pickColor"
+            name="addImage"
+            required />
+    </div> -->
+
+    <div class="select-menu">
+        <div class="select-btn">
+            <span class="sBtn-text">Select color</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <ul class="options">
+            <li class="option" id="red" style="background: linear-gradient(0.25turn, #ffdede, #ff5454);">
+                <span class="option-text">Red</span>
+            </li>
+            <li class="option" id="orange" style="background: linear-gradient(0.25turn, #ffe2b6, #ffa154);">
+                <span class="option-text">Orange</span>
+            </li>
+            <li class="option" id="yellow" style="background: linear-gradient(0.25turn, #feffc4, #fffc54);">
+                <span class="option-text">Yellow</span>
+            </li>
+            <li class="option" id="green" style="background: linear-gradient(0.25turn, #c4ffd6, #7fff54);">
+                <span class="option-text">Green</span>
+            </li>
+            <li class="option" id="blue" style="background: linear-gradient(0.25turn, #d4d1ff, #6554ff);">
+                <span class="option-text">Blue</span>
+            </li>
+            <li class="option" id="purple" style="background: linear-gradient(0.25turn, #fbcfff, #d754ff);">
+                <span class="option-text">Purple</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- <script src="colorselector.js"></script> -->
+
+    <button id="btn" onclick="liAdd()">Confirm</button>
+
+    </div>
+
+    <div id="todolist">
+        <div id="listTitle">
+        <h1 class="todoTitle">To-do List</h1>
+        </div>
+    </div>
+
+    </div>
+
+    <p style="font-style: italic;">Made by: Kotone Tanno</p>
+
+
+    <!-- Popup starts hidden
+    <div id="popup" class="hidden">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Yay!</h2>
+            <p>You've finished a task. Great job!</p>
+            <button id="confettiButton" onclick="confetti({particleCount:100,spread:70,origin:{y: 0.6 }})">Yay!</button>
+            <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+        </div>
+    </div> -->
+    <div id="confettiContainer"></div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script src="todolist.js" defer></script>
+</html>
